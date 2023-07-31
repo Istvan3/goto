@@ -1,0 +1,10 @@
+<launch>
+  <!-- Start turtlesim_node -->
+  <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node"/>
+
+  <!-- Start go_to node -->
+  <node name="go_to_node" pkg="goto" type="go_to" output="screen">
+    <remap from="/cmd_vel" to="/turtle1/cmd_vel"/>
+  </node>
+</launch>
+
